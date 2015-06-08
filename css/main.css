@@ -1,0 +1,58 @@
+/* apply these settings in body in all pages */
+body {
+    font-family: Lato;
+    font-weight: 400;
+    text-align: justify;
+    padding: 5px;
+}
+/* change navbar color*/
+.navbar-default {
+    background-image: none;
+    background-color: #9B0000;
+}
+.navbar-default .nav {
+    width: 100%;
+}
+.navbar-default .navbar-nav>li {
+    width: 9%;
+}
+/* navbar content color */
+.navbar-default .navbar-nav>li>a {
+    color: #FFF;
+}
+.carousel {
+    margin: 5px;
+}
+.carousel-caption {
+    font-weight: bold;
+    color: #DC143C;
+}
+/* quotes in aboutus  */
+.caption {
+    color: #ff0000;
+    font-style: italic;
+}
+/*placehold on homepage */
+.img-margin  {
+    margin: 5px;
+}
+/* defines maps dimensions */
+#map-canvas {
+    width: 100%;
+    height: 400px;
+}
+body .well {
+    background: #efefe8;
+    border-color: #efefe8;
+    margin-top: 20px;
+}
+.btn {
+    background-color: #7E0000;
+    color: #FFFFFF;
+}
+footer {
+    background: #000;
+    margin-top: 20px;
+    padding: 20px;
+    color: #FFF;
+}

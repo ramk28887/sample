@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <title>Directions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact</a></li>
+                <li class="active"><a href="directions.html">Directions</a></li>
+                <li><a a data-toggle="modal" data-target="#myModal"">Feedback</a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                <li><a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter fa-2x" ></i> </a></li>
+                <li>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </nav>
+
+
+    <!--main contennt-->
+    <section class="main-content">
+        <div class="row row-buffer">
+            <!--left column-->
+            <div class="col-lg-8">
+                <h2 class="zero-top-margin">Directions</h2>
+                <div id="map-canvas"></div>
+            </div>
+
+            <!--right column-->
+            <div class="col-lg-4">
+                <div class="well">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="yourname" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="yournumber" placeholder="Your phone number">
+                        </div>
+                        <button type="submit" class="btn">Call me back</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Feedback Form</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="myForm">
+                        <label> First Name:</label><br/>
+                        <input type="text" placeholder="First Name" class="input" size="30" required><br/>
+                        <label> Last Name:</label><br/>
+                        <input type="text" placeholder="Last Name" class="input" size="30" required><br/>
+                        <label> Company Name:</label><br/>
+                        <input type="text" placeholder="Company Name" class="input" size="30"><br/>
+                        <label> Address:</label><br/>
+                        <input type="text" placeholder="Street" class="input" size="30"><br/><br/>
+                        <input type="text" placeholder="City" class="input" size="30"><br/><br/>
+                        <input type="text" placeholder="Zipcode" class="input" size="30"><br/><br/>
+                        <label> Email ID <span class="glyphicon glyphicon-envelope"></span>:</label><br/>
+                        <input type="email" class="input" placeholder="sample@mail.com" size="30" required><br/>
+                        <label> Contact No <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> :</label><br/>
+                        <input type="text"  placeholder="xxx-xxx-xxxx" class="input" size="30" required><br/>
+                        <label for="message">Your message:</label><br />
+                        <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br/>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="Mailto:ramk28887@gmail.com"><button type="button" class="btn btn-success" data-submit="modal" id="submit">Submit</button></a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="row">
+            <div class="content">
+                <div class="col-lg-12">
+
+                    <!--lists-->
+                    <div class="col-lg-4">
+                        <ul class="list-unstyled">
+                            <li class="header">QUICK LINK</li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="list-unstyled">
+                            <li class="header">RESOURCES</li>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a data-toggle="modal" data-target="#myModal">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="list-unstyled">
+                            <li class="header">CONTACT US</li>
+                            <li><a href="contactUs.html">Contact</a></li>
+                            <li><a href="directions.html">Directions</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li>
+                                <button class="btn"><i class="fa fa-envelope"></i> Email Us</button>
+                                <button class="btn"><i class="fa fa-phone"></i> Call us Now 01582 732503</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!--copyright-->
+                <div class="col-lg-12">
+                    <p class="small">Copyright © 2015. All Rights Reserved. Site by Ramakrishna</p>
+
+                    <p class="small">This authorised and regulated by The Regulation Authority - SRA Number 28887 Vat Registeration No: 123456789</p>
+                    <p class="small">Company number: 9876543 Indemnity Insurance with: Endurance Worldwide Insurance Ltd - for further information please contact manager</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/map.js"></script>
+</body>
+
+</html>
